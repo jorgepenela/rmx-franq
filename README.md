@@ -1,4 +1,4 @@
-# rmx-franq 2021
+# 2021 Landing de franquicias inmobiliarias.
 
 - Diseño UI/UX
 - Mapa interactivo HTML 
@@ -7,6 +7,8 @@
 - Backend en PHP/MYSQL
 - Exportación de regisrtos en archivo Excel
 
-Ver demo acá: https://remax-franquicias.com.ar/franqtest/
+Ver demo: https://remax-franquicias.com.ar/franqtest/
 
-Diseño, y desarrollo Front y backend por Jorge Penela.
+Diseño UI/UX + desarrollo Front y Backend: Jorge Penela, <br/>
+Creatividad : Jimena Polleschi, Salvador Villar Aldao, Facundo Val.<br/>
+Anarketing Publicidad.
