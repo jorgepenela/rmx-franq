@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+$gris: #353535;
+$rojo: #DC1C2E;
+$azul: #003DA5; 
+$b1: #313962;
+$b2: #717EBA;
+
+
+$black : 900;
+$bold : 700;
+$regular : 400;
+
+// RESET -------------------------------------------------
+*{
+    font-family: 'Poppins', sans-serif;
+    color: $gris;
+}
+body{
+    background: #fafafa;
+}
+ul{
+    padding: 0px;
+    margin: 0px;
+    li{
+        display: inline-block;
+        list-style-type: none;
+    }
+}
+a{
+    text-decoration:  none;
+    &:focus, &:hover{
+        color: inherit;
+    }
+}
+
+// Tipografias
+h1,h2,h3{
+    font-weight: $bold;
+}
+p,span, li, a{
+    font-size: 13px;
+}
+
+button{
+    border: none;    
+}
+// COMPONENTES -------------------------------------------
+body.loading{
+    
+    .cargando{
+        background-color: $azul;
+        background-image: url(../img/globo-emoji.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;    
+        position: fixed;
+        z-index: 9999999999999999999;
+        display: block;
+        color: #fff;
+
+    }
+}
+.cargando{
+    display: none;
+}
+// botones
+.mybtn{
+    transition: all 1s;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background: $azul;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    &.red{
+        background-color: $rojo;        
+    }
+    &.textual{
+        background-color: transparent;
+        color: $azul;
+    }
+    &.line{
+        background-color: transparent;
+        border: solid thin $azul;
+        color: $azul;
+        &:hover{
+            color: $azul;
+        }
+    }
+    &.small{
+        font-size: 10px;
+        padding: 5px 15px;
+    }
+    &:hover, &:focus{
+        color: #fff;
+    }
+}
+.card{
+    background: #fff;
+    border-radius: 5px;
+    padding: 50px;
+    box-shadow: 1px 2px 5px rgba($color: #000000, $alpha: 0.3);
+}
+.hidden{
+    display: none;
+}
+// SLIDERS ----------------------------------------------------------
+
+.slick-arrow{
+    position: absolute;
+    top: 40% !important;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    color: transparent;
+    z-index: 99;
+    background-size: cover;
+    overflow: hidden;
+}
+.slick-next{
+    right: 0px;
+    background-image: url(../img/next.png);
+}
+.slick-prev{
+    top: 0px;
+    background-image: url(../img/prev.png);
+}
+.slick-dots{    
+    padding-top: 10px;
+    text-align: center;
+    li{
+        button{
+            display: inline-block;
+            height: 4px;
+            width: 35px;
+            margin: 2px;
+            overflow: hidden;
+            background: $b2;
+        }        
+        &.slick-active{
+            button{
+                background: $b1;
+            }
+        }
+    }
+}
+
+// SECCIONES ---------------------------------------------
+
+section{
+    padding: 100px 0px;
+    position: relative;
+}
+header{
+    background-color: #fff;
+    padding: 30px 0px;
+    a{
+        img{
+            width: 150px;
+            height: auto;
+        }
+    }
+    nav{
+        ul{
+            margin-top: 00px;
+            li{
+                color: $b1;
+                margin: 10px;
+                a{
+                    color: $b1;
+                }
+            }
+        }
+    }
+}
+#home{
+    padding-top: 0px;
+    position: relative;
+    .slick-slide{
+        height: 500px;
+        background-color: gainsboro;
+        background-size: cover;
+        background-position: center;
+    }
+    #mensaje{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        h1{
+            color: #fff;            
+            font-size: 75px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px #000;
+        }
+        .mybtn{
+            transform: scale(1.3);
+        }
+    }
+}
+$altomapa : 500px;
+#data{
+    small{
+        color: $rojo;
+    }
+    h3{
+        margin-bottom: 50px;
+    }
+    #stats{
+        margin-bottom: 100px;
+        .flex{
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+            justify-content: space-between;
+            .columna{
+                position: relative;                
+                width: 50px;
+                height: 300px;
+                
+                .altoOfi{
+                    position: absolute;
+                    bottom: 30px;
+                    left: 50%;
+                    transform: translate(-50%, 00%);
+                    width: 30px;
+                    height: 10px;
+                    transition: all 3s;
+                    background-color: $rojo;
+                    margin: 0 auto;                    
+
+                    .techito{
+                        width: 40px;
+                        position: relative;
+                        top: -25px;
+                        left: -5px;
+                    }
+                    .cantOfi{
+                        position: absolute;
+                        top: -50px;
+                        left: -10px;
+                        background-color: #fff;
+                        box-shadow: 2px 2px  5px rgba($color: #000000, $alpha: 0.3);
+                        width: 50px;
+                        text-align: center;
+                    }
+                }
+                .anio{
+                    position: absolute;
+                    bottom: 5px;
+                    width: 100%;
+                    border-top: dotted thin $gris;
+                }
+            }
+            
+        }
+    }
+    #map{
+        
+        cursor: all-scroll;        
+        height: $altomapa;
+        overflow: auto;
+        position: relative;
+        text-align: center;
+        #mapaCompleto{
+            position: absolute;                        
+        }
+        area{
+            cursor: pointer;            
+        }        
+        
+    }
+    
+    .aim{
+        background-color: rgba($color: #000000, $alpha: 0.3);
+        height: $altomapa;
+        width: 100%;
+        margin-left: 12px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: none;
+        
+        .card{
+            padding: 15px;
+            padding-left: 140px;
+            position: absolute;
+            width: 340px;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 99999;
+            height: 150px;
+            .img{
+                position: absolute;
+                background-color: $b2;
+                width: 120px;
+                height: 150px;            
+                top: 0px;
+                left: 0px;
+                img{
+                    width: 120px;
+                    height: 150px;
+                    object-fit: cover;
+                    object-position: center;
+                    margin-top: -1px;
+                    border-radius: 5px 0px 0px 5px;
+                }
+            }
+            .txt{
+                h4{
+                    font-size: 14px;
+                    font-weight: $black;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+            .cerrar{
+                cursor: pointer;
+                background-color: #fff;
+                box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.3);
+                position: absolute;                        
+                padding: 5px 11px;
+                border-radius: 20px;
+                top: -15px;
+                right: -15px;
+                text-align: center;
+            }
+        }
+    }
+    
+    
+}
+#what{
+    height: 100vh;
+    background-image: url(../img/what.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .slick-dots{
+        text-align: left;
+    }
+    .quehace{
+        h4{
+            font-size: 20px;
+            margin: 20px 0px;
+        }
+    }
+}
+#form{
+    background: $b1;
+    #steps{
+        color: #fff;
+        margin: 7px;
+        font-weight: $bold;
+        font-size: 16px;
+    }
+    #formTitle{
+        color: #fff;        
+    }
+    #fill{
+        width: 100%;
+        height: 3px;
+        background: $b2;        
+        margin: 20px auto;
+        margin-left: -15px;
+        .filled{
+            transition: 1s;
+            height: inherit;
+            background: #fff;;
+            width: 5%;
+        }
+    }
+    #formwrap{
+        width: 700px;
+        margin:  auto;
+        .card{
+            min-height: 400px;
+        }
+    }
+    label{
+        font-size: 11px;
+        text-align: left !important;
+        color: $azul;
+        font-weight: $bold;
+    }
+    h4{
+        font-weight: $bold;
+        font-size: 13px;
+    }
+    input[type=text], input[type=email], input[type=number], textarea{
+        width: 100%;
+        border: solid thin #eaeaea;
+        box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.3);
+        outline: none !important;
+        padding: 5px 10px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    textarea{
+        height: 100px;
+    }
+    select{
+        width: 100%;            
+        border: none;
+        box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.3);
+        outline: none !important;
+        padding: 5px 10px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }    
+    #step1{
+        .txt{
+            width: 50%;
+        }
+        .img{
+            border-radius: 0px 5px 5px 0px;
+            position: absolute;
+            background-image: url(../img/donde.jpg);
+            right: 0px;
+            top: 0px;
+            width: 42%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;            
+            #cuantasOficinas{
+                width: 100%;
+                text-align: center !important;
+                font-size: 14px;
+                font-weight: $bold;
+                position: absolute;
+                bottom: 0px;                
+                padding: 10px;
+            }   
+        }
+    }
+    #step2{
+
+    }
+    #step3{
+        .acuerdo{
+            font-weight: $regular;
+            color: $gris;
+        }
+    }
+}
+#testimonials{    
+    .sliderTestimonials{        
+        padding: 0px 25px;        
+        article{
+            padding: 25px;
+        }
+        .slick-prev{
+            left: 00px;
+        }
+    }
+    .card{
+        position: relative;
+        padding: 30px;
+        padding-top: 250px;
+
+        .img{
+            background-color: #eaeaea;
+            height: 220px;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border-radius: 5px 5px 0px 0px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            span{
+                background-color: $rojo;
+                color: #fff;
+                display: inline-block;
+                padding: 5px;
+                font-size: 9px;
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+            }
+        }
+        .q{
+            font-size: 12px;
+            color: $b1;
+            font-weight: bold;
+            margin: 0px;
+        }
+        .a{
+            margin: 0px;
+            font-size: 12px;
+        }
+        
+    }
+    
+}
+
+footer{
+    padding: 50px 0px;
+    font-size: 10px;
+    text-align: justify;
+}
+
+// RESPONSIVE --------------------------------------------
+.xs{
+    display: none;
+}
+.hamb{
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+@media screen and (max-width: 500px){    
+    //general
+    main{
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    section{
+        padding: 30px 0px;
+    }
+    .xs-center{
+        text-align: center !important;
+    }
+    .xs{
+        display: inline-block;
+    }
+    .card{
+        padding: 25px;
+    }
+    .mybtn{
+        font-size: 11px;
+    }
+
+
+    // hedaer
+    header{
+        nav{
+            display: none;
+        }
+    }
+    // home
+    #home{
+        #mensaje{
+            h1{
+                font-size: 47px;
+                line-height: 1em;
+            }
+            .mybtn{
+                transform: scale(1);
+            }
+        }
+    }
+    // mapa
+    #data{
+        padding: 30px 10px;
+        #stats{
+            margin-bottom: 30px;
+        }
+        .aim{
+            .card{
+                width: 82%;
+                padding: 30px;
+                height: auto;
+                .txt{
+                    
+                }
+                .img{
+                    display: none;
+                }
+            }
+        }
+        
+    }
+    // que hace un broker
+    #what{
+        height: 150vh;
+        .card{
+            margin-top: 350px;
+            background-color: rgba($color: #fff, $alpha: 0.9);
+        }
+    }
+    // formulario    
+    #fill{
+        width: 100% !important;
+        max-width: 57vw;
+    }
+    #formwrap{
+        width: 100% !important;
+    }
+
+    #form{
+        #step1{
+            .txt{
+                width: 100%;
+            }
+            .img{
+                background-image: none;                
+                position: absolute;
+                width: 100%;
+                height: 76px;
+                bottom: 0px !important;
+                top: auto;
+
+                #cuantasOficinas{
+                    position: static;
+                    font-size: 12px;
+                }
+
+            }
+        }
+        #step3{
+            .container-fluid, .row{
+                padding: 0px;
+            }
+        }
+    }
+    #testimonials{
+        .slick-arrow{
+            display: none !important;
+        }
+        .sliderTestimonials{
+            article{
+                padding: 0px;
+                width: 100%;
+            }
+        }
+    }
+}
+// tablet
+@media screen and (min-width: 501px) and (max-width: 1100px){
+    #map, .aim{
+        height: 356px !important;
+    }
+}
+// laptop
+@media screen and (min-width: 1101px) and (max-width: 1400px){    
+    #map, .aim{
+        height: 426px !important;
+    }
+
+}
