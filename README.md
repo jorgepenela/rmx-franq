@@ -7,7 +7,7 @@
 - Backend en PHP/MYSQL
 - Exportación de regisrtos en archivo Excel
 
-Ver demo: https://remax-franquicias.com.ar/franqtest/
+Visitar: https://remax-franquicias.com.ar/
 
 Diseño UI/UX + desarrollo Front y Backend: Jorge Penela, <br/>
 Creatividad : Jimena Polleschi, Salvador Villar Aldao, Facundo Val.<br/>
